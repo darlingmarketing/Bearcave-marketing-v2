@@ -11,6 +11,7 @@ const geistSans = Geist({
   subsets: ["latin"],
   display: "swap",
   weight: "variable",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 const playfair = Playfair_Display({
@@ -19,6 +20,7 @@ const playfair = Playfair_Display({
   display: "swap",
   style: ["normal", "italic"],
   weight: "variable",
+  fallback: ["Georgia", "serif"],
 });
 
 export const metadata: Metadata = {

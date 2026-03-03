@@ -1,4 +1,4 @@
-import { Cpu, Package, GitBranch, Zap, AlertTriangle } from "lucide-react";
+import { Cpu, Package, GitBranch, Zap, AlertTriangle, Terminal } from "lucide-react";
 import type { Metadata } from "next";
 import { getTool } from "./data";
 
@@ -49,6 +49,18 @@ export default async function LabItemPage({ params }: Props) {
           <p className="text-[#c0c0c0] text-base md:text-lg leading-relaxed max-w-2xl">
             {tool.summary}
           </p>
+
+          {/* Logic Breakdown */}
+          {tool.logicBreakdown && (
+            <div className="border-l-2 border-[#00F2FF] pl-5 mt-2">
+              <p className="text-[10px] tracking-[0.3em] uppercase text-[#00F2FF] mb-2">
+                Logic Breakdown
+              </p>
+              <p className="text-[#a0a0a0] text-sm leading-relaxed">
+                {tool.logicBreakdown}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Architecture */}
@@ -70,6 +82,37 @@ export default async function LabItemPage({ params }: Props) {
             ))}
           </ul>
         </section>
+
+        {/* Code Snippet */}
+        {tool.codeSnippet && (
+          <section>
+            <div className="flex items-center gap-3 mb-6">
+              <Terminal size={16} className="text-[#00F2FF]" />
+              <h2 className="text-xs tracking-[0.3em] uppercase text-[#00F2FF]">
+                Code Snippet
+              </h2>
+              <span className="ml-auto font-mono text-[10px] text-[#3a3a3a] tracking-[0.1em] uppercase">
+                {tool.codeSnippet.language}
+              </span>
+            </div>
+            <div className="border border-[#1f1f1f] bg-[#040404]">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-[#1f1f1f]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+                <span className="ml-2 text-[10px] text-[#3a3a3a] tracking-[0.15em] font-mono">
+                  {(() => {
+                    const EXT: Record<string, string> = { typescript: "ts", javascript: "js", php: "php", yaml: "yml" };
+                    return `${tool.name.toLowerCase().replace(/ /g, "-")}.${EXT[tool.codeSnippet.language] ?? tool.codeSnippet.language}`;
+                  })()}
+                </span>
+              </div>
+              <pre className="overflow-x-auto px-6 py-6 text-xs font-mono leading-relaxed text-[#c0c0c0] whitespace-pre">
+                <code>{tool.codeSnippet.code}</code>
+              </pre>
+            </div>
+          </section>
+        )}
 
         {/* Dependencies */}
         <section>

@@ -29,6 +29,42 @@ const LAB_ITEMS = [
     tags: ["Next.js", "Edge", "Core Web Vitals"],
     summary: "Server component orchestration layer targeting LCP < 2.5s across all routes.",
   },
+  {
+    id: "edge-image-negotiator",
+    name: "The Edge Image Negotiator",
+    version: "v1.0.0",
+    status: "Production",
+    category: "Performance / Edge",
+    tags: ["TypeScript", "Cloudflare Workers", "AVIF"],
+    summary: "Cloudflare Worker that serves AVIF/WebP/JPEG based on browser capabilities — at the edge, before hitting origin.",
+  },
+  {
+    id: "crm-aware-ai-hook",
+    name: "The CRM-Aware AI Hook",
+    version: "v1.2.0",
+    status: "Production",
+    category: "AI / CRM Integration",
+    tags: ["PHP", "WordPress", "WooCommerce", "LLM"],
+    summary: "Server-side WordPress function that hydrates an LLM prompt with real purchase history and CRM segment data.",
+  },
+  {
+    id: "cicd-smoke-test",
+    name: "The CI/CD Smoke Test",
+    version: "v1.1.0",
+    status: "Production",
+    category: "DevOps / Infrastructure",
+    tags: ["YAML", "GitHub Actions", "Bash"],
+    summary: "GitHub Actions step that fires a headless HTTP health check post-deploy and triggers auto-rollback on any 5xx.",
+  },
+  {
+    id: "ga4-analytics-bridge",
+    name: "The GA4 Analytics Bridge",
+    version: "v1.3.0",
+    status: "Production",
+    category: "Data Engineering / Analytics",
+    tags: ["JavaScript", "Node.js", "GA4"],
+    summary: "Node.js service that pulls GA4 page metrics and writes them to WordPress post meta to power a live provider dashboard.",
+  },
 ];
 
 export default function LabIndexPage() {

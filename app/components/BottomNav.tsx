@@ -39,7 +39,7 @@ export default function BottomNav() {
               <Link key={href} href={href} className="flex-1 max-w-[80px]">
                 <motion.div
                   className="flex flex-col items-center gap-1 relative"
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   {/* Active indicator dot */}

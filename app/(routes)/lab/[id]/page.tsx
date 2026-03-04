@@ -115,8 +115,8 @@ export default async function LabItemPage({ params }: Props) {
           </section>
         )}
 
-        {/* Model Training Visualization */}
-        {tool.modelTraining && (
+        {/* Lead Score Lab — Model Training Visualization */}
+        {tool.id === "lead-score-lab" && tool.modelTraining && (
           <section>
             <div className="flex items-center gap-3 mb-6">
               <BrainCircuit size={16} className="text-[#00F2FF]" />

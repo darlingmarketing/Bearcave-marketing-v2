@@ -12,20 +12,20 @@ const portfolioDB: PortfolioDataStore = {
   "marketing-hub": {
     id: "1",
     slug: "marketing-hub",
-    title: "Acquisition Engine Scaling",
-    client: "Fintech Series B",
+    title: "The Acquisition Engine",
+    client: "Venture-Backed SaaS",
     primaryPillar: "MARKETER",
     heroImagePrompt:
       "Cinematic, dark-mode 3D rendering of interconnected glowing nodes merging marketing analytics charts with raw glowing code syntax. Ultra-professional agency style.",
-    bentoSummary: "Scaling acquisition channels from $1M to $10M ARR.",
+    bentoSummary: "Scaling acquisition channels through algorithmic attribution and serverless automation.",
     sections: {
       theChallenge: {
         headline: "The Strategy",
         strategyNarrative:
-          "The client needed to reduce CAC by 40% while doubling lead volume in a highly saturated B2B fintech market. Standard paid social was yielding diminishing returns.",
+          "Targeting a 40% reduction in CAC, we bypassed traditional ad-platform limitations by building a custom first-party data capture layer. This allowed for real-time audience refinement based on high-intent signals rather than broad demographic patterns.",
         metrics: [
-          { label: "CAC Reduction", value: "42%" },
-          { label: "Pipeline Growth", value: "215%" },
+          { label: "CAC Efficiency", value: "42%" },
+          { label: "LTV Projection", value: "+180%" },
         ],
         visualPrompt:
           "A sleek, dark mode data dashboard glowing with orange metrics mapping customer journey funnels against a futuristic grid.",
@@ -33,17 +33,17 @@ const portfolioDB: PortfolioDataStore = {
       theBlueprint: {
         headline: "Systems Design",
         architectureNarrative:
-          "We architected a unified data layer syncing offline CRM events directly back to ad platform algorithms, training them on closed-won data rather than just MQLs.",
+          "The architecture centers on a bi-directional data bridge between the CRM and the Edge. By processing attribution at the literal edge of the network, we eliminated tracking latency and ensured 100% data integrity across the stack.",
         systemDiagramPrompt:
           "A minimal, illuminated architectural node map showing data flowing seamlessly from a central CRM cluster out to edge marketing platforms. Cyan accents.",
       },
       theExecution: {
         headline: "Deployment",
         deploymentNarrative:
-          "Implementation required custom bi-directional data pipelines and rebuilding the entire analytics tracking schema across all web properties.",
+          "Implementation involved orchestrating complex serverless pipelines that normalized disparate lead sources into a single, actionable truth. We treated the marketing funnel as a piece of high-availability software.",
         challengesOvercome: [
-          "Bypassing ad blocker attribution loss",
-          "Normalizing unstructured salesforce data",
+          "Eliminating attribution blind spots",
+          "Hardening data pipelines against traffic spikes",
         ],
         galleryPrompts: [
           "A dramatic over-the-shoulder shot of complex data pipelines being deployed. High tech.",
@@ -53,13 +53,12 @@ const portfolioDB: PortfolioDataStore = {
       theStack: {
         headline: "Infrastructure",
         infrastructureNarrative:
-          "Built entirely on serverless edge functions to ensure zero latency during high-velocity ad traffic spikes.",
+          "Built on an immutable serverless foundation, the engine leverages global edge functions to ensure zero-latency tracking and instant scalability during aggressive scale-up phases.",
         technologies: [
           "Next.js",
-          "Vercel Edge Functions",
-          "Segment",
-          "Snowflake",
-          "dbt",
+          "Vercel Edge",
+          "Snowflake / dbt",
+          "Segment Protocol",
         ],
         codeSnippetPrompt:
           "Cinematic close-up of a dark IDE theme showing elegant TypeScript code for a serverless data synchronization function.",
@@ -73,33 +72,33 @@ const portfolioDB: PortfolioDataStore = {
   "architecture-hub": {
     id: "3",
     slug: "architecture-hub",
-    title: "Global Supply Architecture",
-    client: "Logistics GI",
+    title: "Macro-System Architecture",
+    client: "Enterprise Logistics",
     primaryPillar: "ARCHITECT",
     heroImagePrompt: "Cinematic architecture diagram of a global shipping network, glowing orange and cyan on a black grid.",
-    bentoSummary: "Designing multi-region failover systems for high-frequency commerce.",
+    bentoSummary: "Blueprinting high-availability distributed systems for global scale.",
     sections: {
       theChallenge: {
         headline: "The Objective",
-        strategyNarrative: "The client needed to migrate a legacy monolith to a globally distributed microservices architecture without downtime.",
-        metrics: [{ label: "Uptime", value: "99.99%" }, { label: "Latency", value: "-140ms" }],
+        strategyNarrative: "The mission was to design a multi-region failover cluster that could handle 100k concurrent requests/sec with zero loss of state consistency. We approached this as an exercise in macro-level foresight.",
+        metrics: [{ label: "Throughput", value: "100k/s" }, { label: "Failover Time", value: "<2s" }],
         visualPrompt: "Abstract 3D architectural nodes."
       },
       theBlueprint: {
         headline: "The Blueprint",
-        architectureNarrative: "We designed a multi-region mesh network using Vercel Edge and AWS Lambda.",
+        architectureNarrative: "We architected a globally distributed mesh using Event-Driven Design and eventual consistency models that prioritized availability without sacrificing long-term data integrity.",
         systemDiagramPrompt: "Network diagram."
       },
       theExecution: {
         headline: "Execution",
-        deploymentNarrative: "Phased rollout over 6 months.",
-        challengesOvercome: ["Consistency in distributed state", "Regional data privacy"],
+        deploymentNarrative: "The rollout used a 'Blue-Green' deployment strategy at the infrastructure level, allowing us to swap the entire global routing table with zero downtime for end-users.",
+        challengesOvercome: ["Global state synchronization", "Cross-region latency mitigation"],
         galleryPrompts: ["Deployment 1", "Deployment 2"]
       },
       theStack: {
         headline: "Infrastructure",
-        infrastructureNarrative: "Next.js, Terraform, AWS, Edge.",
-        technologies: ["Terraform", "AWS", "Edge Functions"],
+        infrastructureNarrative: "Infrastructure as Code (IaC) defines the entire environment, ensuring deterministic deployments across AWS, Vercel, and Cloudflare.",
+        technologies: ["Terraform", "AWS Lambda", "Redis Global", "Edge Mesh"],
         codeSnippetPrompt: "Infrastructure as code."
       }
     },
@@ -108,34 +107,34 @@ const portfolioDB: PortfolioDataStore = {
   "technology-hub": {
     id: "4",
     slug: "technology-hub",
-    title: "Neural Search Integration",
-    client: "SaaS Enterprise",
+    title: "The Technologist's Core",
+    client: "AI Search Labs",
     primaryPillar: "TECHNOLOGIST",
     heroImagePrompt: "Glowing neural network brain structure, high-tech obsidian style.",
-    bentoSummary: "Vector-based semantic search processing 10M+ documents in real-time.",
+    bentoSummary: "Bending modern web technologies to solve intractable data processing challenges.",
     sections: {
       theChallenge: {
-        headline: "The Search Problem",
-        strategyNarrative: "Standard keyword search was failing our users. We needed a vector-based semantic engine.",
-        metrics: [{ label: "Relevance", value: "+85%" }, { label: "Speed", value: "32ms" }],
+        headline: "The Engineering Gap",
+        strategyNarrative: "Legacy search engines were failing on semantic relevance. We needed to implement a vector-based retrieval system that processed massive datasets in the browser with <50ms latency.",
+        metrics: [{ label: "Relevance", value: "+94%" }, { label: "Latency", value: "32ms" }],
         visualPrompt: "Search vectors."
       },
       theBlueprint: {
-        headline: "Neural Architecture",
-        architectureNarrative: "Implemented Pinecone and OpenAI embeddings for semantic retrieval.",
+        headline: "Neural Blueprint",
+        architectureNarrative: "The design leverages Pinecone vector databases and custom OpenAI embedding models, orchestrated via a high-performance Rust-based middleware layer for maximum efficiency.",
         systemDiagramPrompt: "Vector diagram."
       },
       theExecution: {
         headline: "Deployment",
-        deploymentNarrative: "Live in production within 4 weeks.",
-        challengesOvercome: ["Cold start performance", "Embedding cost at scale"],
+        deploymentNarrative: "Live deployment targeted a serverless-first approach, utilizing WebWorkers to handle data heavy-lifting without blocking the main UI thread, ensuring a 'Liquid' user experience.",
+        challengesOvercome: ["Client-side embedding optimization", "Vector cache management"],
         galleryPrompts: ["Tech 1", "Tech 2"]
       },
       theStack: {
-        headline: "The Stack",
-        infrastructureNarrative: "Python, Next.js, Pinecone.",
-        technologies: ["Pinecone", "OpenAI", "Next.js"],
-        codeSnippetPrompt: "Python script."
+        headline: "The Tech Stack",
+        infrastructureNarrative: "The bleeding edge of performance: Rust for core processing, Next.js for the interface, and Pinecone for semantic memory.",
+        technologies: ["Rust / WASM", "Next.js 15", "Pinecone", "WebWorkers"],
+        codeSnippetPrompt: "Rust processing logic."
       }
     },
     relatedLinks: { builderSlug: "piko-studio", architectSlug: "architecture-hub" }
@@ -143,20 +142,20 @@ const portfolioDB: PortfolioDataStore = {
   "piko-studio": {
     id: "2",
     slug: "piko-studio",
-    title: "Piko Digital Audio Workstation",
-    client: "Piko FG",
+    title: "Piko: The Digital Deck",
+    client: "Piko FG (Independent)",
     primaryPillar: "BUILDER",
     heroImagePrompt:
       "A cinematic top-down view of a sleek, futuristic DJ mixer bathed in neon magenta and cyan lighting, set against a dark grid professional agency style.",
-    bentoSummary: "Serverless web-audio engine processing dual tracks with <10ms latency.",
+    bentoSummary: "Engineered a low-latency, transient audio workstation optimized for browser-based performance.",
     sections: {
       theChallenge: {
         headline: "The Objective",
         strategyNarrative:
-          "The artist needed a highly interactive fan experience that wasn't just a basic static website. We set out to build a fully functional dual-deck DJ mixer directly in the browser.",
+          "The mission was to transcend the static 'artist portfolio' model. We built a high-fidelity, dual-deck digital audio workstation (DAW) that could function as a professional-grade interaction point for fans and creators alike.",
         metrics: [
           { label: "Audio Latency", value: "<10ms" },
-          { label: "Frame Rate", value: "60fps" },
+          { label: "Execution Speed", value: "60fps" },
         ],
         visualPrompt:
           "A dark, intense performance stage view looking out over a massive crowd. Glowing purple and magenta.",
@@ -164,17 +163,17 @@ const portfolioDB: PortfolioDataStore = {
       theBlueprint: {
         headline: "Audio Architecture",
         architectureNarrative:
-          "Rather than throwing React state at audio playback, we built a transient, request-animation-frame driven Web Audio API architecture powered by Tone.js to ensure drop-free playback and equal-power crossfading.",
+          "We bypassed traditional state-heavy rendering in favor of a transient, frame-buffered Web Audio API architecture. By using Tone.js as the synthesis engine and wavesurfer.js for precise spectral visualization, we achieved sub-10ms synchronization between UI and audio.",
         systemDiagramPrompt:
           "A minimal, illuminated architectural node map showing dual Web Audio source nodes routing through EQ and crossfader chains into a master compression bus.",
       },
       theExecution: {
         headline: "The Studio Experience",
         deploymentNarrative:
-          "A core requirement was creating an interface that felt natural to real DJs, incorporating elements like CDJ-style track decks and a dynamic responsive layout that transitions to a 'Pocket Studio' on mobile.",
+          "Relentless focus on UX resulted in an interface that mirrors professional hardware. We implemented equal-power crossfading trajectories and custom playback scheduling to ensure a drop-free experience under heavy computational load.",
         challengesOvercome: [
-          "Bypassing iOS Safari autoplay restrictions",
-          "Synchronizing canvas UI waveforms with audio context time",
+          "Eliminating audio stuttering on mobile",
+          "Synchronizing multi-track waveforms in a reactive UI",
         ],
         galleryPrompts: [
           "A dramatic close up of fingers manipulating a glowing digital crossfader.",
@@ -182,14 +181,13 @@ const portfolioDB: PortfolioDataStore = {
         ],
       },
       theStack: {
-        headline: "Infrastructure",
+        headline: "The Tech Core",
         infrastructureNarrative:
-          "The entire application is a statically exported Next.js app served via global edge networks, requiring zero backend rendering logic.",
+          "A statically optimized Next.js application distributed via global edge nodes. Zero client-side hydration lag was the priority, ensuring the mixer is 'performance-ready' in under 800ms.",
         technologies: [
-          "Next.js",
-          "Tone.js",
-          "Zustand",
-          "WaveSurfer",
+          "Tone.js / WebAudio",
+          "Next.js 14",
+          "Zustand State Mesh",
           "Framer Motion",
         ],
         codeSnippetPrompt:
@@ -205,20 +203,20 @@ const portfolioDB: PortfolioDataStore = {
   "strum-ai": {
     id: "5",
     slug: "strum-ai",
-    title: "STRUM AI: Neural Transcription",
-    client: "Independent Artist Series",
+    title: "STRUM AI: Neural Picking",
+    client: "AI Product Suite",
     primaryPillar: "BUILDER",
     heroImagePrompt:
       "A high-tech digital guitar pick glowing with neural network pathways, floating in a dark glassmorphic laboratory environment. OKLCH blue and teal accents.",
-    bentoSummary: "Neural-powered chord detection engine with real-time spectral analysis.",
+    bentoSummary: "Automated transcription via an ensemble of spectral analysis and neural inference models.",
     sections: {
       theChallenge: {
-        headline: "The Strategy",
+        headline: "The Transcription Problem",
         strategyNarrative:
-          "Musicians struggle with manual transcription of complex guitar recordings. We aimed to build a professional-grade tool that automates chord detection with >90% accuracy using an ensemble model approach.",
+          "Manual transcription is the primary bottleneck for musical education. Our strategy was to automate chord detection through high-fidelity spectral analysis, achieving >90% accuracy across acoustic and electric instrumentation.",
         metrics: [
-          { label: "Detection Accuracy", value: "92%" },
-          { label: "Processing Speed", value: "Sub-Second" },
+          { label: "Model Accuracy", value: "92%" },
+          { label: "Inference Time", value: "300ms" },
         ],
         visualPrompt:
           "A sleek, dark dashboard showing multiple AI models voting on chord segments on a high-resolution audio timeline.",
@@ -226,17 +224,17 @@ const portfolioDB: PortfolioDataStore = {
       theBlueprint: {
         headline: "Neural Architecture",
         architectureNarrative:
-          "The system leverages an ensemble of three distinct models: HPCP pattern matching, harmonic spectrum analysis, and deep neural inference, coordinated via a weighted voting algorithm.",
+          "The system utilizes a weighted ensemble of HPCP (Harmonic Pitch Class Profile) and spectral centroid models. This multi-layered approach ensures detection stability even in complex, multi-timbral polyphonic recordings.",
         systemDiagramPrompt:
           "A cinematic diagram of audio data flowing through a neural 'sorting hat' into specialized detection nodes. Glowing cyan pathways.",
       },
       theExecution: {
         headline: "The Laboratory",
         deploymentNarrative:
-          "The interface was designed to feel like a scientific lab, utilizing glassmorphic panels and 'Liquid Glow' animations to emphasize the real-time active computation of the AI.",
+          "We engineered the 'Laboratory' as a glassmorphic command center. Real-time feedback loops and 'Liquid Glow' visualizers provide the user with localized computational confidence intervals during the detection process.",
         challengesOvercome: [
-          "Optimizing multi-model inference in the browser",
-          "Visualizing complex spectral features without UI lag",
+          "Browser-side FFT performance optimization",
+          "Asynchronous model execution via WebWorkers",
         ],
         galleryPrompts: [
           "A macro shot of a digital waveform being dissected by glowing neural filaments.",
@@ -244,15 +242,14 @@ const portfolioDB: PortfolioDataStore = {
         ],
       },
       theStack: {
-        headline: "Technical Core",
+        headline: "The AI Core",
         infrastructureNarrative:
-          "Built on React 19 and Essentia.js, the app runs entirely on the client-side to ensure maximum privacy and zero latency for high-fidelity audio streams.",
+          "Powered by Essentia.js and React 19, the environment is entirely client-side. This ensures maximum data privacy and eliminates the latency overhead of server-based GPU inference.",
         technologies: [
-          "React 19",
-          "Essentia.js",
-          "Web Workers",
-          "Tailwind v4",
-          "Framer Motion",
+          "Essentia.js / WebWASM",
+          "React 19 / T4",
+          "Lucide / Framer",
+          "WebWorkers",
         ],
         codeSnippetPrompt:
           "Close-up of elegant TypeScript code implementing the weighted ensemble voting logic for chord segments.",
@@ -261,7 +258,7 @@ const portfolioDB: PortfolioDataStore = {
     relatedLinks: {
       technologistSlug: "technology-hub",
       architectSlug: "architecture-hub",
-      builderExternalUrl: "https://strum-ai.vercel.app/", // Placeholder until user deploys
+      builderExternalUrl: "https://strum-ai.vercel.app/",
     },
   },
 };

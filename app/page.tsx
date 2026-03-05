@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
+import RoleHighlights from "@/components/home/RoleHighlights";
 import DisciplinaryMatrix from "@/components/home/DisciplinaryMatrix";
 import LabsTriggerGrid from "@/components/labs/LabsTriggerGrid";
 
@@ -9,6 +10,9 @@ export default function HomePage() {
 
       {/* ── IMMERSIVE PROLOGUE (Hero) ─────────────────────────────────── */}
       <HeroSection />
+
+      {/* ── ROLE HIGHLIGHTS (The 3-Pillar Beast) ────────────────────────── */}
+      <RoleHighlights />
 
       {/* ── CORE CAPABILITIES (Bento Matrix) ────────────────────────────── */}
       <DisciplinaryMatrix />

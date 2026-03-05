@@ -1,8 +1,9 @@
+import { ArrowRight, Terminal } from "lucide-react";
 import HeroCanvas from "@/app/components/HeroCanvas";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[95vh] flex flex-col justify-center px-6 md:px-12 bg-black overflow-hidden border-b border-neutral-900">
+    <section className="relative min-h-[95vh] flex flex-col justify-center px-6 md:px-12 bg-black overflow-hidden border-b border-neutral-900 liquid-glow">
       {/* Background Atmosphere - UPGRADED TO 2026 ELITE 3D SCENE */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10" />
@@ -17,6 +18,14 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <div className="flex flex-col gap-6 max-w-4xl">
+          {/* Status Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#111] border border-[#222] rounded-full w-fit mb-4 animate-fade-in-up">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#00F2FF] animate-pulse" />
+            <span className="text-[9px] font-mono tracking-[0.2em] uppercase text-[#666]">
+              Neural Grid Status: <span className="text-[#00F2FF]">Optimized</span>
+            </span>
+          </div>
+
           <div
             className="flex items-center gap-4 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
@@ -28,25 +37,21 @@ export default function HeroSection() {
           </div>
 
           <h1
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-black text-[#EDEDED] leading-[0.9] tracking-[-0.03em] animate-fade-in-up"
+            className="font-serif text-5xl md:text-7xl lg:text-9xl font-black text-[#EDEDED] leading-[0.85] tracking-[-0.04em] animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Strategy <span className="text-[#333] italic font-light">&</span>{" "}
-            Architecture.
+            Strategy <span className="text-[#333] italic font-extralight text-gradient-cyan">/</span> Architecture.
             <br />
-            Execution <span className="text-[#333] italic font-light">
-              &
-            </span>{" "}
-            Code.
+            Execution <span className="text-[#333] italic font-extralight text-gradient-cyan">&</span> Code.
           </h1>
 
           <p
-            className="text-lg md:text-xl text-[#a0a0a0] leading-relaxed max-w-2xl mt-4 animate-fade-in-up"
+            className="text-lg md:text-xl text-[#a0a0a0] leading-relaxed max-w-2xl mt-4 animate-fade-in-up font-light"
             style={{ animationDelay: "0.3s" }}
           >
             I don't just plan campaigns; I build the infrastructure that scales
-            them. A multi-disciplinary approach bridging growth marketing with
-            relentless engineering execution.
+            them. A multi-disciplinary approach bridging <span className="text-[#EDEDED]">growth marketing</span> with
+            <span className="text-[#EDEDED]"> relentless engineering execution</span>.
           </p>
 
           <div
@@ -55,15 +60,18 @@ export default function HeroSection() {
           >
             <a
               href="#matrix"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#EDEDED] text-black text-sm font-bold tracking-[0.1em] uppercase hover:bg-[#FFA500] transition-colors duration-300"
+              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#EDEDED] text-black text-sm font-bold tracking-[0.1em] uppercase hover:bg-[#FFA500] transition-all duration-500 overflow-hidden"
             >
-              Explore the Matrix
-              <ArrowRight size={18} />
+              <span className="relative z-10 flex items-center gap-3">
+                Explore the Matrix
+                <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-4 border border-[#333] text-[#EDEDED] text-sm font-bold tracking-[0.1em] uppercase hover:bg-[#111] hover:border-[#555] transition-all duration-300"
+              className="inline-flex items-center gap-3 px-10 py-5 border border-[#1f1f1f] text-[#EDEDED] text-sm font-bold tracking-[0.1em] uppercase hover:bg-[#050505] hover:border-[#333] transition-all duration-300 backdrop-blur-sm"
             >
+              <Terminal size={16} className="text-[#00F2FF]" />
               Start a Dialogue
             </a>
           </div>

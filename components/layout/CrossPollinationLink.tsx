@@ -94,7 +94,7 @@ export default function CrossPollinationLink({
         href={externalUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative block w-full overflow-hidden rounded-xl border border-[#1f1f1f] bg-black p-6 transition-all hover:border-[#333] hover:bg-[#050505]"
+        className="group relative block w-full overflow-hidden rounded-xl border border-[#1f1f1f] p-6 transition-all hover:border-[#333] hover:shadow-[0_8px_32px_-12px_rgba(0,0,0,0.5)] glass-panel"
       >
         {linkContent}
       </a>
@@ -104,7 +104,7 @@ export default function CrossPollinationLink({
   return (
     <Link
       href={href}
-      className="group relative block w-full overflow-hidden rounded-xl border border-[#1f1f1f] bg-black p-6 transition-all hover:border-[#333] hover:bg-[#050505]"
+      className="group relative block w-full overflow-hidden rounded-xl border border-[#1f1f1f] p-6 transition-all hover:border-[#333] hover:shadow-[0_8px_32px_-12px_rgba(0,0,0,0.5)] glass-panel"
     >
       {linkContent}
     </Link>

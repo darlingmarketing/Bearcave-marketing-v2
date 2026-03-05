@@ -2,6 +2,7 @@
 
 import React from "react";
 import { BarChart3, Binary, Layout } from "lucide-react";
+import TiltWrapper from "@/components/shared/TiltWrapper";
 
 const ROLES = [
     {
@@ -45,28 +46,30 @@ export default function RoleHighlights() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {ROLES.map((role) => (
-                        <div key={role.id} className="group flex flex-col items-center text-center">
-                            <div className="mb-6 p-6 rounded-2xl bg-[#050505] border border-[#1a1a1a] transition-all duration-500 group-hover:scale-110 group-hover:border-[#333] glass-panel relative">
-                                {role.icon}
-                                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-black opacity-0 group-hover:opacity-10 transition-opacity" />
+                        <TiltWrapper key={role.id} intensity={15} className="h-full">
+                            <div className="group flex flex-col items-center text-center h-full">
+                                <div className="mb-6 p-6 rounded-2xl bg-[#050505] border border-[#1a1a1a] transition-all duration-500 group-hover:scale-110 group-hover:border-[#333] glass-panel relative">
+                                    {role.icon}
+                                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-black opacity-0 group-hover:opacity-10 transition-opacity" />
+                                </div>
+
+                                <h3 className="font-serif text-2xl font-bold text-[#EDEDED] mb-3">
+                                    {role.title}
+                                </h3>
+
+                                <p className="text-[#888] text-sm leading-relaxed mb-6 max-w-xs font-light">
+                                    {role.description}
+                                </p>
+
+                                <div className="flex flex-wrap justify-center gap-2 mt-auto">
+                                    {role.skills.map((skill) => (
+                                        <span key={skill} className="px-3 py-1 bg-[#111] border border-[#222] rounded text-[9px] font-mono text-[#666] uppercase tracking-wider group-hover:text-[#a0a0a0] transition-colors">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-
-                            <h3 className="font-serif text-2xl font-bold text-[#EDEDED] mb-3">
-                                {role.title}
-                            </h3>
-
-                            <p className="text-[#888] text-sm leading-relaxed mb-6 max-w-xs font-light">
-                                {role.description}
-                            </p>
-
-                            <div className="flex flex-wrap justify-center gap-2">
-                                {role.skills.map((skill) => (
-                                    <span key={skill} className="px-3 py-1 bg-[#111] border border-[#222] rounded text-[9px] font-mono text-[#666] uppercase tracking-wider group-hover:text-[#a0a0a0] transition-colors">
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
+                        </TiltWrapper>
                     ))}
                 </div>
             </div>

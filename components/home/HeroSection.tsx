@@ -14,6 +14,15 @@ export default function HeroSection() {
         {/* Subtle vignetting */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80 z-20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-40 z-20" />
+
+        {/* --- SPATIAL SPHERE (SPLINE-STYLE POLISH) --- */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] z-10 opacity-30 md:opacity-50 pointer-events-none">
+          <div className="absolute inset-0 rounded-full glass-primitive float-primitive border-2 border-white/10 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#00F2FF]/20 via-transparent to-[#FF0055]/20 animate-pulse" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/5 blur-3xl rounded-full" />
+          </div>
+          <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[80%] h-12 bg-black/60 blur-2xl rounded-full scale-110" />
+        </div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">

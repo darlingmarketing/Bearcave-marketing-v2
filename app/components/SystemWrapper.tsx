@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "./globals.css";
+import "../globals.css";
 import BottomNav from "./BottomNav";
 import LenisProvider from "./LenisProvider";
 import SystemHUD from "./SystemHUD";

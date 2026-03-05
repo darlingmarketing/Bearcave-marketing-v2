@@ -6,6 +6,7 @@ import BottomNav from "./BottomNav";
 import LenisProvider from "./LenisProvider";
 import SystemHUD from "./SystemHUD";
 import FloatingIslandNav from "@/components/layout/FloatingIslandNav";
+import AppMobileNav from "@/components/layout/AppMobileNav";
 import PortfolioBrain from "@/components/shared/PortfolioBrain";
 import SystemBoot from "./SystemBoot";
 import { AnimatePresence, motion } from "framer-motion";
@@ -29,9 +30,11 @@ export default function SystemWrapper({
                     transition={{ duration: 1.2, ease: "easeOut" }}
                 >
                     <LenisProvider>
-                        <FloatingIslandNav />
-                        <main className="pt-0 md:pt-16 pb-0">{children}</main>
-                        <BottomNav />
+                        <div className="hidden md:block">
+                            <FloatingIslandNav />
+                        </div>
+                        <main className="pt-0 md:pt-16 pb-20 md:pb-0">{children}</main>
+                        <AppMobileNav />
                         <SystemHUD />
                         <PortfolioBrain />
                     </LenisProvider>

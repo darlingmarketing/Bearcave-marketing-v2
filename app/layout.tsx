@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Montserrat, Fira_Code } from "next/font/google";
-import { Playfair_Display } from "next/font/google";
+import { Geist, Montserrat, Fira_Code, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import BottomNav from "./components/BottomNav";
-import LenisProvider from "./components/LenisProvider";
-import SystemHUD from "./components/SystemHUD";
+import SystemWrapper from "./components/SystemWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,13 +79,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-black text-[#f0f0f0] antialiased">
-        <LenisProvider>
-          <Header />
-          <main className="pt-0 md:pt-16 pb-0">{children}</main>
-          <BottomNav />
-          <SystemHUD />
-        </LenisProvider>
+      <body className="bg-black text-[#f0f0f0] antialiased selection:bg-[#FFA500] selection:text-black">
+        <SystemWrapper>
+          {children}
+        </SystemWrapper>
       </body>
     </html>
   );

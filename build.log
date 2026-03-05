@@ -1,0 +1,23 @@
+
+> bearcave@0.1.0 build
+> next build --webpack
+
+Γû▓ Next.js 16.1.6 (webpack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 7.0s
+  Running TypeScript ...
+Failed to compile.
+
+./piko-artist-website-v3/archive/hooks/useStemGenerator.ts:10:43
+Type error: Cannot find module '@/lib/audioshake' or its corresponding type declarations.
+
+   8 |
+   9 | import { useState, useCallback, useRef, useEffect } from 'react';
+> 10 | import { requestStems, checkStatus } from '@/lib/audioshake';
+     |                                           ^
+  11 |
+  12 | interface StemUrls {
+  13 |   vocals: string;
+Next.js build worker exited with code: 1 and signal: null

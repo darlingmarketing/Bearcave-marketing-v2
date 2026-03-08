@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Montserrat, Fira_Code, Playfair_Display } from "next/font/google";
+import { Inter, Montserrat, Fira_Code, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SystemWrapper from "./components/SystemWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const interSans = Inter({
+  variable: "--font-geist-sans", // Keeping the variable name to avoid breaking CSS
   subsets: ["latin"],
   display: "swap",
-  weight: "variable",
   fallback: ["system-ui", "sans-serif"],
 });
 
@@ -75,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${playfair.variable} ${montserrat.variable} ${firaCode.variable}`}>
+    <html lang="en" className={`${interSans.variable} ${playfair.variable} ${montserrat.variable} ${firaCode.variable}`}>
       <head>
         <script
           type="application/ld+json"

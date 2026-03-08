@@ -3,11 +3,9 @@
 import { useEffect, useState, useRef } from "react";
 
 const BOOT_LINES = [
-  "INITIALIZING BEARCAVE CORE v2.6.0...",
-  "MOUNTING AUTHORITY PROTOCOL...",
-  "CALIBRATING 3D SPATIAL GRID...",
-  "LOADING PROOF REGISTRY...",
-  "ESTABLISHING UPLINK...",
+  "LOADING DARLING MARKETING & TECHNOLOGY...",
+  "MOUNTING PROOF REGISTRY...",
+  "CONNECTING TO CASE STUDIES...",
   "SYSTEM READY.",
 ];
 
@@ -15,22 +13,25 @@ export default function SystemBoot({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
   const [lineIdx, setLineIdx] = useState(0);
   const [exiting, setExiting] = useState(false);
-  const [binaryStream, setBinaryStream] = useState("");
+  const [showSkip, setShowSkip] = useState(false);
   const doneRef = useRef(false);
 
-  // Binary stream ticker
+  const finish = () => {
+    if (doneRef.current) return;
+    doneRef.current = true;
+    setExiting(true);
+    setTimeout(onComplete, 500);
+  };
+
+  // Show skip button after 0.5s
   useEffect(() => {
-    const interval = setInterval(() => {
-      setBinaryStream(
-        Array.from({ length: 32 }, () => Math.round(Math.random())).join("")
-      );
-    }, 60);
-    return () => clearInterval(interval);
+    const t = setTimeout(() => setShowSkip(true), 500);
+    return () => clearTimeout(t);
   }, []);
 
-  // Progress counter
+  // Progress — total ~1.4s
   useEffect(() => {
-    const duration = 2200;
+    const duration = 1400;
     const startTime = Date.now();
     const tick = () => {
       const elapsed = Date.now() - startTime;
@@ -40,49 +41,41 @@ export default function SystemBoot({ onComplete }: { onComplete: () => void }) {
       setLineIdx(lineTarget);
       if (pct < 100) {
         requestAnimationFrame(tick);
-      } else if (!doneRef.current) {
-        doneRef.current = true;
-        setTimeout(() => {
-          setExiting(true);
-          setTimeout(onComplete, 600);
-        }, 400);
+      } else {
+        setTimeout(finish, 300);
       }
     };
     requestAnimationFrame(tick);
-  }, [onComplete]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black"
       style={{
         opacity: exiting ? 0 : 1,
-        transition: "opacity 0.6s ease-in-out",
+        transition: "opacity 0.5s ease-in-out",
         pointerEvents: exiting ? "none" : "all",
       }}
     >
       {/* Corner accents */}
-      <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-[#00F2FF]/40" />
-      <div className="absolute top-6 right-6 w-12 h-12 border-t-2 border-r-2 border-[#00F2FF]/40" />
-      <div className="absolute bottom-6 left-6 w-12 h-12 border-b-2 border-l-2 border-[#00F2FF]/40" />
-      <div className="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-[#00F2FF]/40" />
-
-      {/* Binary stream top */}
-      <div className="absolute top-8 left-0 right-0 text-center font-mono text-[9px] text-[#00F2FF]/20 tracking-[0.4em] overflow-hidden">
-        {binaryStream}
-      </div>
+      <div className="absolute top-6 left-6 w-10 h-10 border-t border-l border-[#00F2FF]/30" />
+      <div className="absolute top-6 right-6 w-10 h-10 border-t border-r border-[#00F2FF]/30" />
+      <div className="absolute bottom-6 left-6 w-10 h-10 border-b border-l border-[#00F2FF]/30" />
+      <div className="absolute bottom-6 right-6 w-10 h-10 border-b border-r border-[#00F2FF]/30" />
 
       {/* Center content */}
-      <div className="flex flex-col items-center gap-8 w-full max-w-sm px-8">
+      <div className="flex flex-col items-center gap-8 w-full max-w-xs px-8">
         {/* Logo mark */}
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col items-center gap-1 text-center">
           <span
-            className="font-serif text-4xl font-black tracking-[0.15em] uppercase"
-            style={{ color: "#00F2FF", textShadow: "0 0 40px #00F2FF88" }}
+            className="font-serif text-3xl font-black tracking-[0.12em] uppercase"
+            style={{ color: "#FFA500", textShadow: "0 0 30px #FFA50066" }}
           >
-            Bearcave
+            Jacob Darling
           </span>
-          <span className="font-mono text-[9px] tracking-[0.35em] text-[#3a3a3a] uppercase">
-            Command Center
+          <span className="font-mono text-[9px] tracking-[0.35em] text-[#444] uppercase">
+            Darling Marketing &amp; Technology
           </span>
         </div>
 
@@ -93,18 +86,18 @@ export default function SystemBoot({ onComplete }: { onComplete: () => void }) {
               className="absolute inset-y-0 left-0 transition-none"
               style={{
                 width: `${progress}%`,
-                background: "linear-gradient(to right, #00F2FF44, #00F2FF)",
-                boxShadow: "0 0 12px #00F2FF",
+                background: "linear-gradient(to right, #FFA50044, #FFA500)",
+                boxShadow: "0 0 10px #FFA500",
               }}
             />
           </div>
           <div className="flex justify-between items-center">
-            <span className="font-mono text-[10px] text-[#3a3a3a] tracking-[0.2em]">
-              BOOT SEQUENCE
+            <span className="font-mono text-[9px] text-[#333] tracking-[0.2em] uppercase">
+              Loading
             </span>
             <span
-              className="font-mono text-[10px] tracking-[0.2em] tabular-nums"
-              style={{ color: "#00F2FF" }}
+              className="font-mono text-[9px] tracking-[0.2em] tabular-nums"
+              style={{ color: "#FFA500" }}
             >
               {String(progress).padStart(3, "0")}%
             </span>
@@ -116,13 +109,13 @@ export default function SystemBoot({ onComplete }: { onComplete: () => void }) {
           {BOOT_LINES.map((line, i) => (
             <div
               key={line}
-              className="font-mono text-[10px] tracking-[0.15em] flex items-center gap-2 transition-all duration-300"
+              className="font-mono text-[9px] tracking-[0.12em] flex items-center gap-2 transition-all duration-200"
               style={{
-                color: i < lineIdx ? "#00F2FF" : i === lineIdx ? "#00F2FF" : "#1f1f1f",
-                opacity: i <= lineIdx ? 1 : 0.2,
+                color: i <= lineIdx ? "#FFA500" : "#1f1f1f",
+                opacity: i <= lineIdx ? 1 : 0.3,
               }}
             >
-              <span style={{ color: i < lineIdx ? "#00F2FF" : "#1f1f1f" }}>
+              <span style={{ color: i < lineIdx ? "#FFA500" : i === lineIdx ? "#FFA500" : "#1f1f1f" }}>
                 {i < lineIdx ? "▸" : i === lineIdx ? "▶" : "·"}
               </span>
               {line}
@@ -131,10 +124,14 @@ export default function SystemBoot({ onComplete }: { onComplete: () => void }) {
         </div>
       </div>
 
-      {/* Binary stream bottom */}
-      <div className="absolute bottom-8 left-0 right-0 text-center font-mono text-[9px] text-[#00F2FF]/20 tracking-[0.4em] overflow-hidden">
-        {binaryStream.split("").reverse().join("")}
-      </div>
+      {/* Skip button */}
+      <button
+        onClick={finish}
+        className="absolute bottom-8 right-8 font-mono text-[9px] tracking-[0.2em] uppercase text-[#333] hover:text-[#666] transition-colors"
+        style={{ opacity: showSkip ? 1 : 0, transition: "opacity 0.4s ease" }}
+      >
+        Skip →
+      </button>
     </div>
   );
 }

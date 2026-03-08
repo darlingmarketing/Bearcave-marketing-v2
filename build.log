@@ -6,18 +6,17 @@
 - Environments: .env.local
 
   Creating an optimized production build ...
-Γ£ô Compiled successfully in 7.0s
+Γ£ô Compiled successfully in 16.7s
   Running TypeScript ...
 Failed to compile.
 
-./piko-artist-website-v3/archive/hooks/useStemGenerator.ts:10:43
-Type error: Cannot find module '@/lib/audioshake' or its corresponding type declarations.
+./scripts/mcp-memory-server.ts:2:24
+Type error: Cannot find module '@modelcontextprotocol/sdk/server/index.js' or its corresponding type declarations.
 
-   8 |
-   9 | import { useState, useCallback, useRef, useEffect } from 'react';
-> 10 | import { requestStems, checkStatus } from '@/lib/audioshake';
-     |                                           ^
-  11 |
-  12 | interface StemUrls {
-  13 |   vocals: string;
+  1 | #!/usr/bin/env node
+> 2 | import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+    |                        ^
+  3 | import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+  4 | import {
+  5 |     CallToolRequestSchema,
 Next.js build worker exited with code: 1 and signal: null

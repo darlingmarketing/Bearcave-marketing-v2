@@ -18,7 +18,7 @@ export default function HomePage() {
       <DisciplinaryMatrix />
 
       {/* ── INTERACTIVE LABS ────────────────────────────────────────────── */}
-      <section className="relative w-full py-24 sm:py-32 px-4 sm:px-8 lg:px-16 mx-auto max-w-7xl z-10 border-t border-neutral-900">
+      <section id="labs" className="relative w-full py-24 sm:py-32 px-4 sm:px-8 lg:px-16 mx-auto max-w-7xl z-10 border-t border-neutral-900">
         <LabsTriggerGrid />
       </section>
     </main>

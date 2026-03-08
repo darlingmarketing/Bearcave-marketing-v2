@@ -6,7 +6,6 @@ import { ArrowUpRight } from "lucide-react";
 import { Pillar } from "@/types";
 import TiltWrapper from "@/components/shared/TiltWrapper";
 
-// We map our 4 pillars to display data
 const PILLARS: {
   id: Pillar;
   title: string;
@@ -17,39 +16,39 @@ const PILLARS: {
 }[] = [
     {
       id: "MARKETER",
-      title: "The Marketer",
-      subtitle: "Strategy & Growth",
+      title: "The Strategist",
+      subtitle: "Growth & Revenue",
       description:
-        "Data-driven campaigns, SEO architecture, and audience engagement models that convert attention into sustainable revenue.",
-      link: "/work/marketing-hub", // Flat structure mock link
-      color: "#FFA500", // Orange
+        "Building acquisition systems that turn traffic into revenue. Data-driven campaigns, SEO architecture, funnel design, and conversion optimization that produces results you can measure.",
+      link: "/work",
+      color: "#FFA500",
     },
     {
       id: "ARCHITECT",
-      title: "The Architect",
-      subtitle: "Systems & Foresight",
+      title: "The Planner",
+      subtitle: "Systems & Scalability",
       description:
-        "Holistic system design and macro-level planning. Building scalable foundations before a single line of code is written.",
-      link: "/work/architecture-hub",
-      color: "#00F2FF", // Cyan
+        "Designing the full system before the first line of code. Technical architecture, MarTech stack design, and macro-level planning that prevents expensive rebuilds six months later.",
+      link: "/work",
+      color: "#00F2FF",
     },
     {
       id: "TECHNOLOGIST",
-      title: "The Technologist",
-      subtitle: "Code & Infrastructure",
+      title: "The Developer",
+      subtitle: "Code & Delivery",
       description:
-        "Full-stack engineering, cloud infrastructure, and modern tech stacks that power high-performance web applications.",
-      link: "/work/technology-hub",
-      color: "#FF0055", // Pink/Red
+        "Full-stack engineering that actually ships. Custom tools, web applications, and infrastructure built with modern stacks — from Next.js to cloud infrastructure to real-time data systems.",
+      link: "/work",
+      color: "#FF0055",
     },
     {
       id: "BUILDER",
-      title: "The Builder",
-      subtitle: "Execution & Deployment",
+      title: "The Executor",
+      subtitle: "From Blueprint to Live",
       description:
-        "Getting hands dirty. Relentless execution, shipping products, and turning blueprints into tangible realities.",
-      link: "/work/strum-ai",
-      color: "#00FF66", // Green
+        "Getting it done. I take a project from idea to deployed product, managing the full lifecycle — strategy, design, build, launch, and iteration. No handoff chaos.",
+      link: "/work",
+      color: "#00FF66",
     },
   ];
 
@@ -66,17 +65,17 @@ export default function DisciplinaryMatrix() {
           <div>
             <p className="text-[#a0a0a0] text-[10px] font-mono tracking-[0.3em] uppercase mb-4 flex items-center gap-3">
               <span className="w-8 h-[1px] bg-[#333]" />
-              Operational Capabilities
+              What I Do
             </p>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-black text-[#EDEDED] tracking-[-0.02em]">
-              The Disciplinary
+              Four Ways
               <br />
-              Matrix
+              I Add Value
             </h2>
           </div>
-          <p className="text-[#888] text-sm md:text-base max-w-md leading-relaxed">
-            Hover to isolate operational frameworks. Select a discipline to dive
-            into flat-architecture case studies.
+          <p className="text-[#888] text-sm md:text-base max-w-md leading-relaxed font-light">
+            Hover any area to explore. Each represents a different way I work with
+            clients — and I can do all four on the same engagement.
           </p>
         </div>
 
@@ -146,7 +145,7 @@ export default function DisciplinaryMatrix() {
                       className="inline-flex items-center gap-4 text-xs font-mono font-bold tracking-[0.2em] uppercase text-[#EDEDED] group-hover:text-white transition-all group/link"
                     >
                       <span className="relative">
-                        View Protocol
+                        See My Work
                         <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover/link:w-full" />
                       </span>
                       <ArrowUpRight

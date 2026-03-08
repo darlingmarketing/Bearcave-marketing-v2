@@ -37,32 +37,35 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Bearcave — Systems Architect & Marketing Portfolio",
+  title: "Jacob Darling | Darling Marketing & Technology",
   description:
-    "Elite 2026 marketing portfolio and systems architecture hub. Executive-level strategy, digital experiences, and technical precision.",
-  keywords: ["systems architect", "marketing portfolio", "digital strategy", "Next.js"],
+    "Jacob Darling is the founder of Darling Marketing & Technology LLC — combining growth marketing strategy with full-stack technical execution across healthcare, e-commerce, SaaS, and more.",
+  keywords: ["marketing consultant", "marketing strategy", "full-stack developer", "growth marketing", "Jacob Darling", "Darling Marketing and Technology"],
   openGraph: {
     type: "website",
-    title: "Bearcave — Systems Architect & Marketing Portfolio",
+    title: "Jacob Darling | Darling Marketing & Technology",
     description:
-      "Elite 2026 marketing portfolio and systems architecture hub.",
+      "Marketing strategy meets technical execution. Jacob Darling — founder of Darling Marketing & Technology LLC.",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Person"],
-  name: "Bearcave",
+  name: "Jacob Darling",
   description:
-    "Systems Architect and Marketing Portfolio — elite digital strategy and technical precision.",
-  jobTitle: "Systems Architect",
+    "Founder of Darling Marketing & Technology LLC. Combines growth marketing strategy with full-stack technical execution across healthcare, e-commerce, SaaS, music tech, and professional education.",
+  jobTitle: "Marketing Strategist & Full-Stack Developer",
   url: "https://bearcave.marketing",
   sameAs: [],
   knowsAbout: [
-    "Systems Architecture",
+    "Growth Marketing",
     "Digital Marketing Strategy",
-    "Web Development",
-    "Brand Strategy",
+    "Full-Stack Web Development",
+    "Systems Architecture",
+    "E-Commerce",
+    "SaaS Marketing",
+    "Healthcare Technology",
   ],
 };
 

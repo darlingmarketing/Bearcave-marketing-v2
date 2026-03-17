@@ -119,7 +119,7 @@ export default function Hero() {
           className="absolute inset-[-12%] will-change-transform"
         >
           <Image
-            src="https://res.cloudinary.com/djhqowk67/image/upload/f_auto,q_auto/v1/studio/graphic-design/jacob-bio-photo-splash"
+            src="/images/bio/jacob-bio-photo-splash.jpg"
             alt="Jacob Darling — Systems Architect"
             fill
             priority

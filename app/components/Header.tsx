@@ -4,11 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-  { label: "Proof", href: "/work" },
-  { label: "Lab", href: "/lab" },
-  { label: "Studio", href: "/studio" },
-  { label: "Resume", href: "/resume" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Work", href: "/work" },
+  { label: "Labs", href: "/lab" },
+  { label: "My Story", href: "/resume" },
+  { label: "Let's Connect", href: "/#contact" },
 ];
 
 export default function Header() {

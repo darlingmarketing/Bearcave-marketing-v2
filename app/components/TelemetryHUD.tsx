@@ -39,7 +39,6 @@ export default function TelemetryHUD() {
   }, []);
 
   useEffect(() => {
-    // eslint-disable-next-line
     setStatuses((prev) => {
       const next = { ...prev };
       (Object.keys(STATUS_CYCLE) as StatusKey[]).forEach((key) => {

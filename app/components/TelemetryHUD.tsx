@@ -39,15 +39,18 @@ export default function TelemetryHUD() {
   }, []);
 
   useEffect(() => {
-    setStatuses((prev) => {
-      const next = { ...prev };
-      (Object.keys(STATUS_CYCLE) as StatusKey[]).forEach((key) => {
-        const cycle = STATUS_CYCLE[key];
-        const value = cycle[tick % cycle.length];
-        next[key] = { value, blink: value !== prev[key].value };
+    const t = window.setTimeout(() => {
+      setStatuses((prev) => {
+        const next = { ...prev };
+        (Object.keys(STATUS_CYCLE) as StatusKey[]).forEach((key) => {
+          const cycle = STATUS_CYCLE[key];
+          const value = cycle[tick % cycle.length];
+          next[key] = { value, blink: value !== prev[key].value };
+        });
+        return next;
       });
-      return next;
-    });
+    }, 0);
+    return () => window.clearTimeout(t);
   }, [tick]);
 
   // Clear blink after animation

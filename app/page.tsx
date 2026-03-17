@@ -7,6 +7,8 @@ import SystemBoot from "./components/SystemBoot";
 import Hero from "./components/Hero";
 import TacticalReel from "./components/TacticalReel";
 import PikoLabBlock from "./components/PikoLabBlock";
+import PeerEndorsementsCarousel from "./components/PeerEndorsementsCarousel";
+import { PEER_ENDORSEMENTS } from "./data/peerEndorsements";
 
 export default function HomePage() {
   const [booted, setBooted] = useState(false);
@@ -33,60 +35,35 @@ export default function HomePage() {
         <PikoLabBlock />
 
         {/* ── ACT III.V: Peer Endorsements ───────────────────────────────── */}
-        <section className="px-6 md:px-12 py-28 border-t border-[#0f0f0f] bg-black">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-12">
-              <p className="text-[#FFA500] text-[10px] font-mono tracking-[0.35em] uppercase mb-4">
-                Verified Feedback
-              </p>
-              <h2 className="font-serif text-3xl md:text-5xl font-black text-[#EDEDED] tracking-[-0.02em]">
-                Peer Endorsements
-              </h2>
-            </div>
+        <section className="py-16 md:py-28 border-t border-[#0f0f0f] bg-black">
+          <div className="px-6 md:px-12 max-w-7xl mx-auto mb-8 md:mb-12">
+            <p className="text-[#FFA500] text-[10px] font-mono tracking-[0.35em] uppercase mb-4">
+              Verified Feedback
+            </p>
+            <h2 className="font-serif text-3xl md:text-5xl font-black text-[#EDEDED] tracking-[-0.02em]">
+              Peer Endorsements
+            </h2>
+          </div>
 
-            {/* Masonry Grid similar to Resume */}
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-              {[
-                { author: "Jesse Wey", role: "Oct 2025", quote: "Jacob has a great balance of strategic thinking and hands-on execution... I’d recommend him to anyone looking for a marketing professional who’s both forward-thinking and results-oriented." },
-                { author: "Andrew Bastnagel", role: "Oct 2025", quote: "Jacob is the kind of marketer who makes an immediate impact... figuring out how to put new technologies to work in practical ways." },
-                { author: "Jerry Stern", role: "Aug 2020", quote: "Very competent and professional... if he said something, you could count on it." },
-                { author: "Kevin Martin See", role: "Oct 2014", quote: "Exuberance and moxie are unparalleled... ability to implement strategies that produce a positive ROI." },
-                { author: "Nick Brown", role: "Oct 2013", quote: "Hardworking, creative and a pleasure to work with." },
-                { author: "Terrence L. Black", role: "Apr 2013", quote: "Focused and engaged... energy and enthusiasm stand out." }
-              ].map((t, i) => (
-                <div key={i} className="break-inside-avoid bg-black border border-[#1f1f1f] p-8 ocean-pearl-glass transition-all hover:border-[#FFA500]/30 h-full flex flex-col justify-between">
-                  <p className="text-sm text-[#EDEDED] leading-relaxed mb-8 italic">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="flex items-center gap-4 mt-auto pt-6 border-t border-[#1f1f1f]/50">
-                    <div className="w-10 h-10 shrink-0 rounded-full bg-[#111] border border-[#222] flex items-center justify-center text-[#FFA500] font-serif font-bold shadow-[0_0_15px_rgba(255,165,0,0.05)]">
-                      {t.author.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-[#FFA500] tracking-tight">
-                        {t.author}
-                      </p>
-                      <p className="text-xs text-[#a0a0a0] font-mono tracking-widest mt-1">
-                        {t.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Full-width carousel */}
+          <div className="w-full px-3 md:px-6">
+            <PeerEndorsementsCarousel items={PEER_ENDORSEMENTS} accentHex="#FFA500" />
+          </div>
 
-            <div className="mt-12 flex justify-center">
-              <a href="/resume" className="text-xs font-mono text-[#a0a0a0] hover:text-[#FFA500] transition-colors border-b border-transparent hover:border-[#FFA500] pb-1">
-                VIEW ALL ENDORSEMENTS
-              </a>
-            </div>
+          <div className="mt-8 md:mt-12 flex justify-center px-6 md:px-12">
+            <a
+              href="/resume"
+              className="text-xs font-mono text-[#a0a0a0] hover:text-[#FFA500] transition-colors border-b border-transparent hover:border-[#FFA500] pb-1"
+            >
+              VIEW ALL ENDORSEMENTS
+            </a>
           </div>
         </section>
 
         {/* ── ACT IV: Contact ────────────────────────────────────────────── */}
         <section
           id="contact"
-          className="px-6 md:px-12 py-28 border-t border-[#0f0f0f] flex flex-col md:flex-row md:items-center justify-between gap-12 bg-black ocean-pearl-glass"
+          className="px-6 md:px-12 py-16 md:py-28 border-t border-[#0f0f0f] flex flex-col md:flex-row md:items-center justify-between gap-10 md:gap-12 bg-black ocean-pearl-glass"
         >
           <div className="flex items-center gap-8">
             <div className="relative group shrink-0">

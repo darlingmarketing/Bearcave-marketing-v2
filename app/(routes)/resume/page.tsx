@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Download, Mail, MapPin, Calendar } from "lucide-react";
 import Image from "next/image";
+import PeerEndorsementsCarousel from "@/app/components/PeerEndorsementsCarousel";
 import {
   TIMELINE,
   KPI_STATS,
@@ -266,28 +267,9 @@ function Testimonials() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {TESTIMONIALS.map((t, i) => (
-            <FadeIn key={i} delay={i * STAGGER_SLOW}>
-              <div className="bg-[#0a0a0a] border border-[#1f1f1f] p-6 h-full flex flex-col hover:border-[#00F2FF]/40 transition-colors ocean-pearl-glass">
-                <p className="text-sm text-[#a0a0a0] leading-relaxed flex-1 mb-6">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-[#1f1f1f]">
-                  <div className="w-9 h-9 rounded-full bg-[#00F2FF]/10 border border-[#00F2FF]/20 flex items-center justify-center text-[#00F2FF] font-bold font-serif shrink-0">
-                    {t.author.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#EDEDED]">
-                      {t.author}
-                    </p>
-                    <p className="text-[10px] text-[#555] font-mono">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+        <FadeIn delay={STAGGER_SLOW}>
+          <PeerEndorsementsCarousel items={TESTIMONIALS} accentHex="#00F2FF" />
+        </FadeIn>
       </div>
     </section>
   );

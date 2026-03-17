@@ -8,9 +8,9 @@ import { Home, Briefcase, FileText, Beaker, Mail } from "lucide-react";
 const NAV_ITEMS = [
   { label: "Home", href: "/", Icon: Home },
   { label: "Work", href: "/work", Icon: Briefcase },
-  { label: "Resume", href: "/resume", Icon: FileText },
-  { label: "Lab", href: "/lab", Icon: Beaker },
-  { label: "Contact", href: "/#contact", Icon: Mail },
+  { label: "My Story", href: "/resume", Icon: FileText },
+  { label: "Labs", href: "/lab", Icon: Beaker },
+  { label: "Let's Connect", href: "/#contact", Icon: Mail },
 ];
 
 export default function BottomNav() {
